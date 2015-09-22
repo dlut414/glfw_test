@@ -14,7 +14,7 @@ namespace glfw_testFunc {
 		if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) glfwSetWindowShouldClose(win, GL_TRUE);
 	}
 
-	void glfw_test::init() {
+	hGl glfw_test::init() {
 		if (!glfwInit()) exit(EXIT_FAILURE);
 		this->window = glfwCreateWindow(640, 480, "Simple example", NULL, NULL);
 		if (!this->window) {
@@ -25,6 +25,7 @@ namespace glfw_testFunc {
 		glfwSwapInterval(1);
 		glfwSetErrorCallback(error_callback);
 		glfwSetKeyCallback(this->window, key_callback);
+		return this->window;
 	}
 
 	void glfw_test::terminate() {

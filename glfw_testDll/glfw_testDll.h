@@ -19,7 +19,7 @@ namespace glfw_testFunc {
 
 	class glfw_test {
 	public:
-		GLFW_TESTDLL_API void WINAPI init();
+		GLFW_TESTDLL_API hGl WINAPI init();
 		GLFW_TESTDLL_API void WINAPI terminate();
 
 		GLFW_TESTDLL_API void WINAPI mainLoop();
